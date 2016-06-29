@@ -9,23 +9,38 @@ import org.testng.annotations.BeforeClass;
 
 public class TC001_LinkedinLogin extends LinkedinWrappers{
 	@Test(dataProvider="fetchData")
-	public void LinkedinLogin(String userName, String passWord, 
-			String vUser) {
+	
+public void LinkedinLogin(String userName, String passWord, 
+			
+String vUser) {
 
-		new LoginPage()
-		.enterUserName(userName)
-		.enterPassword(passWord)
-		.clickLogin()
-		.verifyUserName(vUser)
-		.clickLogout();
+		
+new LoginPage()
+		
+.enterUserName(userName)
+		
+.enterPassword(passWord)
+		
+.clickLogin()
+		
+.verifyUserName(vUser)
+		
+.clickLogout();
 	}
-	@BeforeClass
-	public void beforeClass() {
-		dataSheetName="TC001";
-		browserName="chrome";
-		testCaseName="Login to OpenTaps";
-		testDescription="Login and Logout in Opentaps using POM framework";
-	}
+	
+@BeforeClass
+	
+public void beforeClass() {
+		
+dataSheetName="TC001";
+		
+browserName="chrome";
+		
+testCaseName="Login to OpenTaps";
+		
+testDescription="Login and Logout in Opentaps using POM framework";
+	
+}
 
 	
 	
